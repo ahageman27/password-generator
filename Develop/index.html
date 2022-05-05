@@ -15,8 +15,10 @@
       <h1>Password Generator</h1>
     </header>
     <div class="criteria-container">
-      <select name="length" id="length">
-      </select>
+      <div>
+        <label for="length">Length of Password</label>
+        <select name="length" id="length"></select>
+      </div>
       <div>
         <input type="checkbox" id="lowercase">
         <label for="lowercase">Lowercase Letters</label>
@@ -33,17 +35,16 @@
         <input type="checkbox" id="special">
         <label for="special"> Special Characters</label>
       </div>
-      <div class="card">
-        <div class="card-header">
-          <h2>Generate a Password</h2>
-        </div>
-        <div class="card-body">
-          <textarea readonly id="password" placeholder="Your Secure Password"
-            aria-label="Generated Password"></textarea>
-        </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h2>Generate a Password</h2>
+      </div>
+      <div class="card-body">
+        <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+      </div>
+      <div class="card-footer">
+        <button id="generate" class="btn">Generate Password</button>
       </div>
     </div>
     <script src="script.js"></script>
