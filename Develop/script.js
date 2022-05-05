@@ -11,7 +11,7 @@ for (var i = 8; i < 129; i++) {
   var lengthElement = document.createElement("option");
   lengthElement.textContent = i;
   lengthElement.value = i;
-  document.getElementById("length").appendChild(lengthElement);
+  document.querySelector("#length").appendChild(lengthElement);
 }
 
 const lowercaseCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -23,7 +23,8 @@ const lowercaseCheck = document.querySelector("#lowercase");
 const uppercaseCheck = document.querySelector("#uppercase");
 const numericCheck = document.querySelector("#numeric");
 const specialCheck = document.querySelector("#special");
-var passwordCharacters = []
+var passwordCharacters = [];
+var finishedPassword = [];
 
 function updateSelections() {
   selections.length = document.querySelector("#length").value;
@@ -51,8 +52,10 @@ function chooseCharacters() {
 function generatePassword() {
   updateSelections();
   chooseCharacters();
-  console.log(selections);
-  console.log(passwordCharacters);
+  for (i = 0; i <= selections.length; i++) {
+    finishedPassword = finishedPassword.concat(passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)])
+  }
+  return finishedPassword.join("")
 }
 
 // Get references to the #generate element
