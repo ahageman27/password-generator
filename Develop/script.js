@@ -7,6 +7,7 @@ var selections = {
   special: false
 }
 
+
 for (var i = 8; i < 129; i++) {
   var lengthElement = document.createElement("option");
   lengthElement.textContent = i;
@@ -50,6 +51,7 @@ function chooseCharacters() {
 }
 
 function generatePassword() {
+  finishedPassword = [];
   updateSelections();
   chooseCharacters();
   for (i = 0; i <= selections.length; i++) {
@@ -63,8 +65,8 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  var password = generatePassword();
 
   passwordText.value = password;
 
