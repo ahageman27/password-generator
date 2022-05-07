@@ -33,7 +33,9 @@ function updateSelections() {
   selections.uppercase = uppercaseCheck.checked;
   selections.numeric = numericCheck.checked;
   selections.special = specialCheck.checked;
+  console.log(selections)
 }
+
 
 function chooseCharacters() {
   if (selections.lowercase) {
@@ -47,6 +49,9 @@ function chooseCharacters() {
   }
   if (selections.special) {
     passwordCharacters = passwordCharacters.concat(specialCharacters);
+  }
+  if (passwordCharacters.length === 0) {
+    alert("Please select at least 1 type of charcter to include in your password");
   }
 }
 
