@@ -54,10 +54,10 @@ function generatePassword() {
   finishedPassword = [];
   updateSelections();
   chooseCharacters();
-  for (i = 0; i <= selections.length; i++) {
-    finishedPassword = finishedPassword.concat(passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)])
+  for (i = 0; i < selections.length; i++) {
+    finishedPassword = finishedPassword.concat(passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)]);
   }
-  return finishedPassword.join("")
+  return finishedPassword.join("");
 }
 
 // Get references to the #generate element
