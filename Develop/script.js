@@ -33,7 +33,6 @@ function updateSelections() {
   selections.uppercase = uppercaseCheck.checked;
   selections.numeric = numericCheck.checked;
   selections.special = specialCheck.checked;
-  console.log(selections)
 }
 
 
